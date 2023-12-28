@@ -10,7 +10,7 @@ body{
   display: none;
 }
 
-video #opv {
+video#opv {
   position: fixed;
   top: 0;
   left: 0;
