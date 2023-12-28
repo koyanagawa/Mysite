@@ -19,15 +19,21 @@ video#opv {
   left: 0;
   object-fit: cover;
   width: 100vw;
+  /* height: 100vh; */
   vertical-align: bottom;
 }
 
-main , footer{
+main {
+  display: none;
+}
+
+footer{
   display: none;
 }
 
 #mv {
   height: 100vh;
+  /* background-color: rgb(216, 251, 254); */
   display: flex;
   justify-content: center;
   align-items: center;
