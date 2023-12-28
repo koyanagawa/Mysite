@@ -1,78 +1,43 @@
 @charset "utf-8";
 
-html{
-  /* overscroll-behavior: none; */
-}
-
-body{
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(228, 93, 93);
-}
-
-h1{
-  font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  letter-spacing: 0.3em;
-}
-
-p{
-  font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  letter-spacing: 0.3em;
-}
-
-.title{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.name{
-  text-align: center;
-}
-
-.button{
-  display: flex;
-  justify-content: center;
-}
-
-#sp_btn{
-  display: none;
-  font-family: 'Josefin Sans', sans-serif;
-  letter-spacing: 0.2em;
-  padding: 24px 20px 24px 23px;
-  text-decoration: none;
-  border-radius: 50%;
-  background-color: white;
-  border: none;
-  margin: 30px;
-  opacity: 0.9;
-}
-
-#sp_btn:hover{
-  opacity: 1;
-}
-
-#movie{
-  margin: 0;
-  padding: 0;
-}
-
-#sp_movie{
-  object-fit: cover;
-  display: none;
-  /* overflow: hidden; */
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  width: 100vw;
-}
-
-#sp_content{
-  display: none;
+.video-container {
+  margin: 0 auto;
   width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.video-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: url(img/video.jpg) no-repeat center center/cover;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100vh;
+  position: absolute;
+}
+
+/*画面サイズが変わっても常に動画の中央が表示されるようにする*/
+/*動画よりも画面が横に長くなるとき用*/
+@media (aspect-ratio: 16/9), (min-aspect-ratio: 16/9) {
+  video {
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/*動画よりも画面が縦に長くなるとき用*/
+@media (max-aspect-ratio: 16/9) {
+  video {
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
