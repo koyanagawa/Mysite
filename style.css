@@ -19,7 +19,6 @@ video#opv {
   left: 0;
   object-fit: cover;
   width: 100vw;
-  height: 100vh;
   vertical-align: bottom;
 }
 
