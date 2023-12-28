@@ -12,51 +12,12 @@
 </head>
 <body>
 
-<video id="sp_movie">
-  <source src="img/sp_movie.mp4" width="100%">
-</video>
-
-<section class="title_wrapper">
-  <section class="title">
-    <div class="name">
-      <h1>Y.KOYANAGAWA</h1>
-      <p>Portfolio</p>
-    </div>
-    <section class="button">
-      <div class="btn02">
-        <button type="button" id="sp_btn">SP</button>
-      </div>
-    </section>
-  </section>
-</section>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<script>
-  $('#sp_btn').fadeIn(2000);
-</script>
-
-<!-- SP映像アクション表示 -->
-<script>
-  document.getElementById('sp_btn').addEventListener('click', function() {
-    document.getElementById('sp_movie').play();
-    $('#sp_movie').fadeIn(2000);
-    $('#sp_btn , .name').hide();
-    const video = document.getElementById('sp_movie');
-  });
-</script>
-
-<!-- <script>
-  document.getElementById('sp_btn').addEventListener('click', function() {
-    document.getElementById('sp_movie').play();
-    $('#sp_movie').fadeIn(2000);
-    $('#sp_btn , .name').hide();
-    const video = document.getElementById('sp_movie');
-    video.addEventListener("ended", (event) => {
-    window.location.href = 'sp/index.html';
-    });
-  });
-</script> -->
+<div class="video-container">
+  <div class="video-wrap">
+  <video src="img/sp_movie.mp4" type="video/mp4" playsinline loop autoplay muted>
+  </video>
+  </div>		
+  </div>	
 
 </body>
 </html>
