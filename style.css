@@ -4,6 +4,9 @@ body{
   margin: 0;
   width: 100%;
   height: 100%;
+  background-image: url(img/SP_portfolio_backgroundimg02.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #opv-wrap {
@@ -20,7 +23,7 @@ video#opv {
   vertical-align: bottom;
 }
 
-main {
+main , footer{
   display: none;
 }
 
